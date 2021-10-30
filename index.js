@@ -45,6 +45,9 @@ async function run(req,res){
             const result = await servicesCollection.insertOne(service);
             res.send(result);
         })
+        app.get('/hello', (req,res)=>{
+            res.send("Hello updated here.");
+        })
     }
     finally{
         // await client.close();
